@@ -131,8 +131,7 @@ def filmes_api_page(page_id):
 @app.route('/api/v2/filmes', methods=['GET'])
 def filmes_api_page2():
     
-    data = {
-              "filmes": [
+    data = [
                 {
                   "data": "13 de fevereiro de 202", 
                   "nome": "Sonic - O Filme", 
@@ -224,10 +223,8 @@ def filmes_api_page2():
                   "sinopse": "Bruno Aleixo \u00e9 alguma coisa entre um cachorro e um urso de pel\u00facia. O personagem de anima\u00e7\u00e3o portugu\u00eas que ganhou fama por uma web-s\u00e9rie de com\u00e9dia chamada 'Os Conselhos que Vos Deixo' ganha seu pr\u00f3prio filme. Na obra c\u00f4mica, ao decidir criar a pr\u00f3pria autobiografia, Bruno procura inspira\u00e7\u00e3o entre amigos para escrever o texto."
                 }
               ]
-            }
-                    
     return jsonify({'filmes': data})
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 443))
     app.run(debug=True, host='0.0.0.0', port=port)

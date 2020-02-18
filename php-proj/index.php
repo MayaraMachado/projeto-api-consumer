@@ -12,11 +12,12 @@
 
 <script type="text/javascript">
 
-            fetch('http://0.0.0.0:5000/api/v2/filmes')
+            fetch('http://127.17.0.1:2455/api/v2/filmes')
             .then((res) => res.json())
             .then((data) => {
-            var j = JSON.stringify(data);
-            var arrayLength = data['filmes'].length;
+	    console.log(data.filmes)
+            var j = JSON.stringify(data.filmes);
+            var arrayLength = data.filmes.length;
             var innerHtml = "<div style='align-text: center;margin-left: 60px;' class='row center-block'>";
 	    for (var i = 0; i < arrayLength; i++) {
 		var film = data['filmes'][i];
