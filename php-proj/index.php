@@ -12,7 +12,7 @@
 
 <script type="text/javascript">
 
-            fetch('http://0.0.0.0:5000/api/v1/filmes/emcartaz')
+            fetch('http://0.0.0.0:5000/api/v2/filmes')
             .then((res) => res.json())
             .then((data) => {
             var j = JSON.stringify(data);
