@@ -3,16 +3,15 @@
 <html>
 <head>
 	<?php include("includes/head-tag-contents.php");?>
+	<meta charset="utf-8">
 </head>
 <body>
-
 <?php include("includes/design-top.php");?>
-<?php include("includes/navigation.php");?>
 
 
 <script type="text/javascript">
 
-            fetch('http://127.17.0.1:2455/api/v2/filmes')
+            fetch('http://127.17.0.1:443/api/v2/filmes')
             .then((res) => res.json())
             .then((data) => {
 	    console.log(data.filmes)
@@ -28,7 +27,7 @@
 			    + "<h5 class='card-title'>"+film['nome']+"</h5>"
 			    + "<p class='card-title' style='color:blue;font-size=11px;'>"+film['data']+"</p>"
 			    + "<p class='card-text'>"+film['sinopse']+"</p>"
-			    + "<a href='#' class='btn btn-primary'>Leia mais + </a>"
+			    + "<a href='about.php?filme="+film['id']+ "' class='btn btn-primary'>Comprar </a>"
 			    + "</div></div>";
 	     }
 	     innerHtml += "</div>";

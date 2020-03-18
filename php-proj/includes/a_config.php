@@ -1,15 +1,15 @@
 <?php
 	switch ($_SERVER["SCRIPT_NAME"]) {
-		case "/projeto/php-proj/about.php":
+		case "/projeto-api-consumer/php-proj/about.php":
 			$CURRENT_PAGE = "About"; 
-			$PAGE_TITLE = "About Us";
+			$PAGE_TITLE = "Sobre";
 			break;
-		case "/projeto/php-proj/contact.php":
+		case "/projeto-api-consumer/php-proj/contact.php":
 			$CURRENT_PAGE = "Contact"; 
-			$PAGE_TITLE = "Contact Us";
+			$PAGE_TITLE = "Contato";
 			break;
 		default:
 			$CURRENT_PAGE = "Index";
-			$PAGE_TITLE = "Welcome to my homepage!";
+			$PAGE_TITLE = "Home!";
 	}
 ?>
